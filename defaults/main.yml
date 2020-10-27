@@ -1,0 +1,18 @@
+# Standards: 0.1
+---
+# @var rclone_definitions:description: List of remote definitions
+# @var rclone_definitions:example: >
+# rclone_definitions:
+#   - name: flexvault
+#     endpoint: https://s3.tms.proactcloud.de
+#     access_key: 8OK3V7PXMFDUTJJ7O4MT
+#     secret_key: aCP5DMfw1-usOPkcu+wHSaRkgbAHY5O4rOKPCK6+
+#     bucket: backups
+#     filename_ecryption: standard
+#     directory_encryption: True
+#     primary_password: Mire5vohR0ohn6bei8tahngair4oophae6IefochuquopheemoaH
+#     secondary_password: iechaa6xoxa9rie1iu0ucoM9Fa2da8thao1hai9Iv8wohphievie
+# @end
+rclone_definitions: []
+
+...

@@ -1,0 +1,23 @@
+{% for item in rclone_definitions %}
+[{{ item.name }}]
+type = s3
+provider = Other
+env_auth = {{ item.env_auth | default(False) | lower }}
+{% if item.endpoint | default(False) %}
+endpoint = {{ item.endpoint }}
+{% endif %}
+region = {{ item.region | default('us-east-1') }}
+access_key_id = {{ item.access_key }}
+secret_access_key = {{ item.secret_key }}
+acl = {{ item.acl | default('private') }}
+force_path_style = {{ item.force_path_style | default(True) | lower }}
+
+[{{ item.name }}-crypt]
+type = crypt
+remote = {{ item.name }}:{{ item.bucket }}
+filename_encryption = {{ item.filename_ecryption | default('standard') }}
+directory_name_encryption = {{ item.directory_encryption | default(True) | lower }}
+password = {{ item.primary_password }}
+password2 = {{ item.secondary_password }}
+
+{% endfor %}

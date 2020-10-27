@@ -1,0 +1,31 @@
+# Standards: 0.1
+---
+- name: Install required packages
+  loop:
+    - rclone
+  package:
+    name: "{{ item }}"
+    state: present
+  tags:
+    - rclone
+
+- name: Create config dir
+  file:
+    path: /root/.config/rclone
+    owner: root
+    group: root
+    state: directory
+  tags:
+    - rclone
+
+- name: Write config file
+  template:
+    src: config.j2
+    dest: /root/.config/rclone/rclone.conf
+    owner: root
+    group: root
+    mode: u=rw,g=rw,o=
+  tags:
+    - rclone
+
+...
