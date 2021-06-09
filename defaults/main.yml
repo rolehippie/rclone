@@ -1,4 +1,4 @@
-# Standards: 0.1
+# Standards: 1.2
 ---
 # @var rclone_definitions:description: List of remote definitions
 # @var rclone_definitions:example: >
