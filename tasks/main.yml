@@ -1,10 +1,16 @@
 # Standards: 1.2
 ---
-- name: Install required packages
-  loop:
-    - rclone
+- name: Remove rclone package
   package:
-    name: "{{ item }}"
+    name: rclone
+    purge: True
+    state: absent
+  tags:
+    - rclone
+
+- name: Install upstream deb
+  apt:
+    deb: "{{ rclone_package }}"
     state: present
   tags:
     - rclone
@@ -14,6 +20,7 @@
     path: /root/.config/rclone
     owner: root
     group: root
+    mode: o=rwx,g=rx,o=rx
     state: directory
   tags:
     - rclone

@@ -1,5 +1,15 @@
 # Standards: 1.2
 ---
+# @var rclone_version:description: Version of the release to install
+# renovate: datasource=github-releases depName=rclone/rclone
+rclone_version: 1.57.0
+
+# @var rclone_arch:description: Architecture of the package to install
+rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
+
+# @var rclone_package:description: Download URL for the package to install
+rclone_package: "https://github.com/rclone/rclone/releases/download/v{{ rclone_version }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb"
+
 # @var rclone_definitions:description: List of remote definitions
 # @var rclone_definitions:example: >
 # rclone_definitions:

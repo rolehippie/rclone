@@ -13,7 +13,10 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 ## Table of content
 
 * [Default Variables](#default-variables)
+  * [rclone_arch](#rclone_arch)
   * [rclone_definitions](#rclone_definitions)
+  * [rclone_package](#rclone_package)
+  * [rclone_version](#rclone_version)
 * [Dependencies](#dependencies)
 * [License](#license)
 * [Author](#author)
@@ -21,6 +24,16 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 ---
 
 ## Default Variables
+
+### rclone_arch
+
+Architecture of the package to install
+
+#### Default value
+
+```YAML
+rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
+```
 
 ### rclone_definitions
 
@@ -45,6 +58,27 @@ rclone_definitions:
     directory_encryption: True
     primary_password: Mire5vohR0ohn6bei8tahngair4oophae6IefochuquopheemoaH
     secondary_password: iechaa6xoxa9rie1iu0ucoM9Fa2da8thao1hai9Iv8wohphievie
+```
+
+### rclone_package
+
+Download URL for the package to install
+
+#### Default value
+
+```YAML
+rclone_package: https://github.com/rclone/rclone/releases/download/v{{ rclone_version
+  }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb
+```
+
+### rclone_version
+
+Version of the release to install
+
+#### Default value
+
+```YAML
+rclone_version: 1.57.0
 ```
 
 ## Dependencies
