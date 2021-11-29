@@ -14,6 +14,8 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 
 * [Default Variables](#default-variables)
   * [rclone_arch](#rclone_arch)
+  * [rclone_backups_extra](#rclone_backups_extra)
+  * [rclone_backups_general](#rclone_backups_general)
   * [rclone_definitions](#rclone_definitions)
   * [rclone_package](#rclone_package)
   * [rclone_version](#rclone_version)
@@ -33,6 +35,86 @@ Architecture of the package to install
 
 ```YAML
 rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
+```
+
+### rclone_backups_extra
+
+List of extra backup jobs
+
+#### Default value
+
+```YAML
+rclone_backups_extra: []
+```
+
+#### Example usage
+
+```YAML
+rclone_backups_extra:
+  - name: example
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    content: |
+      exit 1
+  - name: example-from-url
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    url: http://example.com/example.yml
+  - name: example-from-template
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    src: path/to/template.j2
+  - name: example-to-remove
+    state: absent
+```
+
+### rclone_backups_general
+
+List of general backup jobs
+
+#### Default value
+
+```YAML
+rclone_backups_general: []
+```
+
+#### Example usage
+
+```YAML
+rclone_backups_general:
+  - name: example
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    content: |
+      exit 1
+  - name: example-from-url
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    url: http://example.com/example.yml
+  - name: example-from-template
+    minute: "0"
+    hour: "6"
+    day: "*"
+    month: "*"
+    weekday: "*"
+    src: path/to/template.j2
+  - name: example-to-remove
+    state: absent
 ```
 
 ### rclone_definitions

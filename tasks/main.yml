@@ -35,4 +35,73 @@
   tags:
     - rclone
 
+- name: Backup from url
+  loop: "{{ rclone_backups_general + rclone_backups_extra }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when: item.url | default(False) and item.state | default("present") == "present"
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=
+  tags:
+    - rclone
+
+- name: Backup from file
+  loop: "{{ rclone_backups_general + rclone_backups_extra }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when: item.src | default(False) and item.state | default("present") == "present"
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=
+  tags:
+    - rclone
+
+- name: Backup from content
+  loop: "{{ rclone_backups_general + rclone_backups_extra }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when: item.content | default(False) and item.state | default("present") == "present"
+  template:
+    src: script.j2
+    dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=
+  tags:
+    - rclone
+
+- name: Delete backup script
+  loop: "{{ rclone_backups_general + rclone_backups_extra }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when: item.state | default("present") == "absent"
+  file:
+    path: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
+    state: absent
+  tags:
+    - rclone
+
+- name: Create backup cronjob
+  loop: "{{ rclone_backups_general + rclone_backups_extra }}"
+  loop_control:
+    label: "{{ item.name }}"
+  cron:
+    name: "rclone {{ item.name }}"
+    minute: "{{ item.minute | default(omit) }}"
+    hour: "{{ item.hour | default(omit) }}"
+    day: "{{ item.day | default(omit) }}"
+    month: "{{ item.month | default(omit) }}"
+    weekday: "{{ item.weekday | default(omit) }}"
+    job: "cronic {{ item.path | default('/usr/bin') }}/{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  tags:
+    - rclone
+
 ...

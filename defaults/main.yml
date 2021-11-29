@@ -25,4 +25,64 @@ rclone_package: "https://github.com/rclone/rclone/releases/download/v{{ rclone_v
 # @end
 rclone_definitions: []
 
+# @var rclone_backups_general:description: List of general backup jobs
+# @var rclone_backups_general:example: >
+# rclone_backups_general:
+#   - name: example
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     content: |
+#       exit 1
+#   - name: example-from-url
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     url: http://example.com/example.yml
+#   - name: example-from-template
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     src: path/to/template.j2
+#   - name: example-to-remove
+#     state: absent
+# @end
+
+rclone_backups_general: []
+# @var rclone_backups_extra:description: List of extra backup jobs
+# @var rclone_backups_extra:example: >
+# rclone_backups_extra:
+#   - name: example
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     content: |
+#       exit 1
+#   - name: example-from-url
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     url: http://example.com/example.yml
+#   - name: example-from-template
+#     minute: "0"
+#     hour: "6"
+#     day: "*"
+#     month: "*"
+#     weekday: "*"
+#     src: path/to/template.j2
+#   - name: example-to-remove
+#     state: absent
+# @end
+rclone_backups_extra: []
+
 ...
