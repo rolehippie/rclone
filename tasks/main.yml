@@ -1,13 +1,5 @@
 # Standards: 1.2
 ---
-- name: Remove rclone package
-  package:
-    name: rclone
-    purge: True
-    state: absent
-  tags:
-    - rclone
-
 - name: Install upstream deb
   apt:
     deb: "{{ rclone_package }}"
