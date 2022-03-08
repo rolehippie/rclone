@@ -1,27 +1,28 @@
 # rclone
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone) [![Testing Build](https://github.com/rolehippie/rclone/workflows/testing/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/rclone/workflows/readme/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/rclone/workflows/galaxy/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/rclone)](https://github.com/rolehippie/rclone/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone) [![Testing Build](https://github.com/rolehippie/rclone/workflows/testing/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/rclone/workflows/readme/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/rclone/workflows/galaxy/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/rclone)](https://github.com/rolehippie/rclone/blob/master/LICENSE)
 
-Ansible role to install and configure rclone backup solution. 
+Ansible role to install and configure rclone backup solution.
 
-## Sponsor 
+## Sponsor
 
-[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu) 
+[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu)
 
 Building and improving this Ansible role have been sponsored by my employer **Proact Deutschland GmbH**.
 
 ## Table of content
 
-* [Default Variables](#default-variables)
-  * [rclone_arch](#rclone_arch)
-  * [rclone_backups_extra](#rclone_backups_extra)
-  * [rclone_backups_general](#rclone_backups_general)
-  * [rclone_definitions](#rclone_definitions)
-  * [rclone_package](#rclone_package)
-  * [rclone_version](#rclone_version)
-* [Dependencies](#dependencies)
-* [License](#license)
-* [Author](#author)
+- [Default Variables](#default-variables)
+  - [rclone_arch](#rclone_arch)
+  - [rclone_backups_extra](#rclone_backups_extra)
+  - [rclone_backups_general](#rclone_backups_general)
+  - [rclone_definitions](#rclone_definitions)
+  - [rclone_package](#rclone_package)
+  - [rclone_version](#rclone_version)
+- [Discovered Tags](#discovered-tags)
+- [Dependencies](#dependencies)
+- [License](#license)
+- [Author](#author)
 
 ---
 
@@ -163,9 +164,14 @@ Version of the release to install
 rclone_version: 1.57.0
 ```
 
+## Discovered Tags
+
+**_rclone_**
+
+
 ## Dependencies
 
-* None
+- None
 
 ## License
 
