@@ -161,7 +161,7 @@ Version of the release to install
 #### Default value
 
 ```YAML
-rclone_version: 1.57.0
+rclone_version: 1.58.0
 ```
 
 ## Discovered Tags
