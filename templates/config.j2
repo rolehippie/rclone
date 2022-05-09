@@ -1,7 +1,7 @@
 {% for item in rclone_definitions %}
 [{{ item.name }}]
 type = s3
-provider = Other
+provider = {{ item.provider | default('Other') }}
 env_auth = {{ item.env_auth | default(False) | lower }}
 {% if item.endpoint | default(False) %}
 endpoint = {{ item.endpoint }}
