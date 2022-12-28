@@ -1,7 +1,7 @@
 ---
 name: readme
 
-'on':
+"on":
   push:
     branches:
       - master
