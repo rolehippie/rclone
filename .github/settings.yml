@@ -64,6 +64,7 @@ branches:
         strict: true
         contexts:
           - linting
+          - testing (default)
       enforce_admins: false
       restrictions:
         apps:
