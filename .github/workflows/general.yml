@@ -6,8 +6,6 @@ name: general
     branches:
       - master
   pull_request:
-    branches:
-      - master
 
 jobs:
   linting:
