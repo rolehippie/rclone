@@ -31,8 +31,8 @@
             "matchUpdateTypes": [
                 "major"
             ],
-            "semanticCommitType": "deps",
-            "semanticCommitScope": "major",
+            "semanticCommitType": "major",
+            "semanticCommitScope": "deps",
             "automerge": false
         },
         {
@@ -41,8 +41,8 @@
             "matchUpdateTypes": [
                 "minor"
             ],
-            "semanticCommitType": "deps",
-            "semanticCommitScope": "minor",
+            "semanticCommitType": "minor",
+            "semanticCommitScope": "deps",
             "automerge": true
         },
         {
@@ -51,8 +51,8 @@
             "matchUpdateTypes": [
                 "patch"
             ],
-            "semanticCommitType": "deps",
-            "semanticCommitScope": "patch",
+            "semanticCommitType": "patch",
+            "semanticCommitScope": "deps",
             "automerge": true
         }
     ],
