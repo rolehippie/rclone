@@ -1,6 +1,6 @@
 # rclone
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone) [![General Workflow](https://github.com/rolehippie/rclone/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/general.yml) [![Readme Workflow](https://github.com/rolehippie/rclone/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/readme.yml) [![Galaxy Workflow](https://github.com/rolehippie/rclone/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/galaxy.yml) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/rclone)](https://github.com/rolehippie/rclone/blob/master/LICENSE)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone) [![Testing Build](https://github.com/rolehippie/rclone/workflows/testing/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/rclone/workflows/readme/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/rclone/workflows/galaxy/badge.svg)](https://github.com/rolehippie/rclone/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/rclone)](https://github.com/rolehippie/rclone/blob/master/LICENSE)
 
 Ansible role to install and configure rclone backup solution.
 
@@ -10,29 +10,17 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 ## Table of content
 
-- [rclone](#rclone)
-  - [Sponsor](#sponsor)
-  - [Table of content](#table-of-content)
-  - [Default Variables](#default-variables)
-    - [rclone\_arch](#rclone_arch)
-      - [Default value](#default-value)
-    - [rclone\_backups\_extra](#rclone_backups_extra)
-      - [Default value](#default-value-1)
-      - [Example usage](#example-usage)
-    - [rclone\_backups\_general](#rclone_backups_general)
-      - [Default value](#default-value-2)
-      - [Example usage](#example-usage-1)
-    - [rclone\_definitions](#rclone_definitions)
-      - [Default value](#default-value-3)
-      - [Example usage](#example-usage-2)
-    - [rclone\_package](#rclone_package)
-      - [Default value](#default-value-4)
-    - [rclone\_version](#rclone_version)
-      - [Default value](#default-value-5)
-  - [Discovered Tags](#discovered-tags)
-  - [Dependencies](#dependencies)
-  - [License](#license)
-  - [Author](#author)
+- [Default Variables](#default-variables)
+  - [rclone_arch](#rclone_arch)
+  - [rclone_backups_extra](#rclone_backups_extra)
+  - [rclone_backups_general](#rclone_backups_general)
+  - [rclone_definitions](#rclone_definitions)
+  - [rclone_package](#rclone_package)
+  - [rclone_version](#rclone_version)
+- [Discovered Tags](#discovered-tags)
+- [Dependencies](#dependencies)
+- [License](#license)
+- [Author](#author)
 
 ---
 
