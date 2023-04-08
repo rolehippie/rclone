@@ -5,7 +5,7 @@
 [![Readme Workflow](https://github.com/rolehippie/rclone/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/readme.yml)
 [![Galaxy Workflow](https://github.com/rolehippie/rclone/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/galaxy.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/rclone)](https://github.com/rolehippie/rclone/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/ansible/role/51492)](https://galaxy.ansible.com/rolehippie/rclone)
+[![Ansible Role](https://img.shields.io/badge/role-rolehippie.rclone-blue)](https://galaxy.ansible.com/rolehippie/rclone)
 
 Ansible role to install and configure rclone backup solution.
 
