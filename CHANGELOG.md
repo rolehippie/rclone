@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/rolehippie/rclone/compare/v1.3.0...v1.3.1) (2023-10-23)
+
+
+### Bugfixes
+
+* **deps:** update dependency rclone/rclone to v1.64.1 ([86813df](https://github.com/rolehippie/rclone/commit/86813dfc2b0fa61627145f5de4b44b1b6bfcd44b))
+* **deps:** update dependency rclone/rclone to v1.64.2 ([b1fc2f5](https://github.com/rolehippie/rclone/commit/b1fc2f5cdf0676da3e7eabe6fd38e19dcee1f40c))
+
 ## [1.3.0](https://github.com/rolehippie/rclone/compare/v1.2.1...v1.3.0) (2023-09-18)
 
 
