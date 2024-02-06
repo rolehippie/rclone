@@ -1,13 +1,13 @@
 ---
 - name: Install upstream deb
-  apt:
+  ansible.builtin.apt:
     deb: "{{ rclone_package }}"
     state: present
   tags:
     - rclone
 
 - name: Create config dir
-  file:
+  ansible.builtin.file:
     path: /root/.config/rclone
     owner: root
     group: root
@@ -17,7 +17,7 @@
     - rclone
 
 - name: Write config file
-  template:
+  ansible.builtin.template:
     src: config.j2
     dest: /root/.config/rclone/rclone.conf
     owner: root
@@ -31,7 +31,7 @@
   loop_control:
     label: "{{ item.name }}"
   when: item.url | default(False) and item.state | default("present") == "present"
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ item.url }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     owner: root
@@ -45,7 +45,7 @@
   loop_control:
     label: "{{ item.name }}"
   when: item.src | default(False) and item.state | default("present") == "present"
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     owner: root
@@ -59,7 +59,7 @@
   loop_control:
     label: "{{ item.name }}"
   when: item.content | default(False) and item.state | default("present") == "present"
-  template:
+  ansible.builtin.template:
     src: script.j2
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     owner: root
@@ -73,7 +73,7 @@
   loop_control:
     label: "{{ item.name }}"
   when: item.state | default("present") == "absent"
-  file:
+  ansible.builtin.file:
     path: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     state: absent
   tags:
@@ -83,7 +83,7 @@
   loop: "{{ rclone_backups_general + rclone_backups_extra }}"
   loop_control:
     label: "{{ item.name }}"
-  cron:
+  ansible.builtin.cron:
     name: "rclone {{ item.name }}"
     minute: "{{ item.minute | default(omit) }}"
     hour: "{{ item.hour | default(omit) }}"
