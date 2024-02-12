@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/rolehippie/rclone/compare/v1.4.2...v2.0.0) (2024-02-12)
+
+
+### Features
+
+* drop support for ubuntu 18.04 ([0340473](https://github.com/rolehippie/rclone/commit/03404732eea9d01b8eb5a21d67ea3a1f3138edbb))
+* used full qualified collection names ([3767890](https://github.com/rolehippie/rclone/commit/3767890ee748657571e4708e3383b970dc114e83))
+
 ## [1.4.2](https://github.com/rolehippie/rclone/compare/v1.4.1...v1.4.2) (2024-01-29)
 
 
