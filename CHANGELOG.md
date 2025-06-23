@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.5.0](https://github.com/rolehippie/rclone/compare/v2.4.3...v2.5.0) (2025-06-23)
+
+
+### Features
+
+* **deps:** update dependency rclone/rclone to v1.70.0 ([#60](https://github.com/rolehippie/rclone/issues/60)) ([95e130f](https://github.com/rolehippie/rclone/commit/95e130f62c337dc50881ce19ce2136a5106d9146))
+
+
+### Bugfixes
+
+* **deps:** update dependency rclone/rclone to v1.70.1 ([#61](https://github.com/rolehippie/rclone/issues/61)) ([0c8ffdd](https://github.com/rolehippie/rclone/commit/0c8ffdd82b9f8c686169ea5bd187ea3206d0d359))
+
 ## [2.4.3](https://github.com/rolehippie/rclone/compare/v2.4.2...v2.4.3) (2025-05-26)
 
 
