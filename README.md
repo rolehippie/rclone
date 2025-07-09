@@ -1,4 +1,4 @@
-# rclone
+# workspace
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone)
 [![General Workflow](https://github.com/rolehippie/rclone/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/general.yml)
@@ -158,8 +158,8 @@ Download URL for the package to install
 #### Default value
 
 ```YAML
-rclone_package: https://github.com/rclone/rclone/releases/download/v{{ rclone_version
-  }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb
+rclone_package: https://github.com/rclone/rclone/releases/download/v{{ 
+  rclone_version }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb
 ```
 
 ### rclone_version
@@ -169,13 +169,12 @@ Version of the release to install
 #### Default value
 
 ```YAML
-rclone_version: 1.70.2
+rclone_version: 1.70.3
 ```
 
 ## Discovered Tags
 
 **_rclone_**
-
 
 ## Dependencies
 
