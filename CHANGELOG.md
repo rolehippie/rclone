@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.0](https://github.com/rolehippie/rclone/compare/v2.6.1...v2.7.0) (2025-10-22)
+
+
+### Features
+
+* apply new repo structure and update linting ([b94e11d](https://github.com/rolehippie/rclone/commit/b94e11dcf2360055c4a2b0d909ec92c3a0b098bd))
+
+
+### Bugfixes
+
+* **patch:** update dependency rclone/rclone to v1.71.2 ([#75](https://github.com/rolehippie/rclone/issues/75)) ([06f26c8](https://github.com/rolehippie/rclone/commit/06f26c8c60d16c0ed5dd761dd98b284eacf3b83d))
+
 ## [2.6.1](https://github.com/rolehippie/rclone/compare/v2.6.0...v2.6.1) (2025-10-06)
 
 
