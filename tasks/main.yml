@@ -30,7 +30,9 @@
   loop: "{{ rclone_backups_general + rclone_backups_extra }}"
   loop_control:
     label: "{{ item.name }}"
-  when: item.url | default(False) and item.state | default("present") == "present"
+  when:
+    - false if item.url is not defined else (item.url | length > 0)
+    - true if item.state is not defined else item.state == "present"
   ansible.builtin.get_url:
     url: "{{ item.url }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -44,7 +46,9 @@
   loop: "{{ rclone_backups_general + rclone_backups_extra }}"
   loop_control:
     label: "{{ item.name }}"
-  when: item.src | default(False) and item.state | default("present") == "present"
+  when:
+    - false if item.src is not defined else (item.src | length > 0)
+    - true if item.state is not defined else item.state == "present"
   ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -58,7 +62,9 @@
   loop: "{{ rclone_backups_general + rclone_backups_extra }}"
   loop_control:
     label: "{{ item.name }}"
-  when: item.content | default(False) and item.state | default("present") == "present"
+  when:
+    - false if item.content is not defined else (item.content | length > 0)
+    - true if item.state is not defined else item.state == "present"
   ansible.builtin.template:
     src: script.j2
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -72,7 +78,8 @@
   loop: "{{ rclone_backups_general + rclone_backups_extra }}"
   loop_control:
     label: "{{ item.name }}"
-  when: item.state | default("present") == "absent"
+  when:
+    - false if item.state is not defined else item.state == "absent"
   ansible.builtin.file:
     path: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     state: absent
@@ -90,8 +97,8 @@
     day: "{{ item.day | default(omit) }}"
     month: "{{ item.month | default(omit) }}"
     weekday: "{{ item.weekday | default(omit) }}"
-    job: "cronic {{ item.path | default('/usr/bin') }}/{{ item.name }}"
-    state: "{{ item.state | default('present') }}"
+    job: "cronic {{ '/usr/bin' if item.path is not defined else item.path }}/{{ item.name }}"
+    state: "{{ 'present' if item.state is not defined else item.state }}"
   tags:
     - rclone
 

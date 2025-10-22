@@ -4,7 +4,7 @@
 rclone_version: 1.71.1
 
 # @var rclone_arch:description: Architecture of the package to install
-rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
+rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' or ansible_architecture == 'arm64' else 'amd64' }}"
 
 # @var rclone_package:description: Download URL for the package to install
 rclone_package: "https://github.com/rclone/rclone/releases/download/v{{ rclone_version }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb"
@@ -18,7 +18,7 @@ rclone_package: "https://github.com/rclone/rclone/releases/download/v{{ rclone_v
 #     secret_key: aCP5DMfw1-usOPkcu+wHSaRkgbAHY5O4rOKPCK6+
 #     bucket: backups
 #     filename_ecryption: standard
-#     directory_encryption: True
+#     directory_encryption: true
 #     primary_password: Mire5vohR0ohn6bei8tahngair4oophae6IefochuquopheemoaH
 #     secondary_password: iechaa6xoxa9rie1iu0ucoM9Fa2da8thao1hai9Iv8wohphievie
 # @end

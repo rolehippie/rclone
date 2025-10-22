@@ -1,4 +1,4 @@
-# workspace
+# rclone
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/rclone)
 [![General Workflow](https://github.com/rolehippie/rclone/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/rclone/actions/workflows/general.yml)
@@ -43,7 +43,8 @@ Architecture of the package to install
 #### Default value
 
 ```YAML
-rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
+rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' or ansible_architecture
+  == 'arm64' else 'amd64' }}"
 ```
 
 ### rclone_backups_extra
@@ -146,7 +147,7 @@ rclone_definitions:
     secret_key: aCP5DMfw1-usOPkcu+wHSaRkgbAHY5O4rOKPCK6+
     bucket: backups
     filename_ecryption: standard
-    directory_encryption: True
+    directory_encryption: true
     primary_password: Mire5vohR0ohn6bei8tahngair4oophae6IefochuquopheemoaH
     secondary_password: iechaa6xoxa9rie1iu0ucoM9Fa2da8thao1hai9Iv8wohphievie
 ```

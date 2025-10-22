@@ -2,21 +2,21 @@
 [{{ item.name }}]
 type = s3
 provider = {{ item.provider | default('Other') }}
-env_auth = {{ item.env_auth | default(False) | lower }}
-{% if item.endpoint | default(False) %}
+env_auth = {{ item.env_auth | default(false) | lower }}
+{% if item.endpoint | default(false) %}
 endpoint = {{ item.endpoint }}
 {% endif %}
 region = {{ item.region | default('us-east-1') }}
 access_key_id = {{ item.access_key }}
 secret_access_key = {{ item.secret_key }}
 acl = {{ item.acl | default('private') }}
-force_path_style = {{ item.force_path_style | default(True) | lower }}
+force_path_style = {{ item.force_path_style | default(true) | lower }}
 
 [{{ item.name }}-crypt]
 type = crypt
 remote = {{ item.name }}:{{ item.bucket }}
 filename_encryption = {{ item.filename_ecryption | default('standard') }}
-directory_name_encryption = {{ item.directory_encryption | default(True) | lower }}
+directory_name_encryption = {{ item.directory_encryption | default(true) | lower }}
 password = {{ item.primary_password }}
 password2 = {{ item.secondary_password }}
 
