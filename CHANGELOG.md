@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.10.0](https://github.com/rolehippie/rclone/compare/v2.9.1...v2.10.0) (2026-03-04)
+
+### Features
+
+* improve conditional behavior ([f5f91e9](https://github.com/rolehippie/rclone/commit/f5f91e93d8caa4024927b6bdcf192665a2c0dca1))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([f5f6598](https://github.com/rolehippie/rclone/commit/f5f6598f696b478894398773fb6c3b9bbffce8f9))
+* replace nixfmt package ([9d86ad5](https://github.com/rolehippie/rclone/commit/9d86ad5ef287d1a39ce0454400d13df2e26587d7))
+
 ## [2.9.1](https://github.com/rolehippie/rclone/compare/v2.9.0...v2.9.1) (2026-02-23)
 
 ### Dependencies
