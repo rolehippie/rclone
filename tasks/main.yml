@@ -31,8 +31,9 @@
   loop_control:
     label: "{{ item.name }}"
   when:
-    - false if item.url is not defined else (item.url | length > 0)
-    - true if item.state is not defined else item.state == "present"
+    - item.url is defined
+    - item.url | length > 0
+    - item.state is not defined or item.state == "present"
   ansible.builtin.get_url:
     url: "{{ item.url }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -47,8 +48,9 @@
   loop_control:
     label: "{{ item.name }}"
   when:
-    - false if item.src is not defined else (item.src | length > 0)
-    - true if item.state is not defined else item.state == "present"
+    - item.src is defined
+    - item.src | length > 0
+    - item.state is not defined or item.state == "present"
   ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -63,8 +65,9 @@
   loop_control:
     label: "{{ item.name }}"
   when:
-    - false if item.content is not defined else (item.content | length > 0)
-    - true if item.state is not defined else item.state == "present"
+    - item.content is defined
+    - item.content | length > 0
+    - item.state is not defined or item.state == "present"
   ansible.builtin.template:
     src: script.j2
     dest: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
@@ -79,7 +82,7 @@
   loop_control:
     label: "{{ item.name }}"
   when:
-    - false if item.state is not defined else item.state == "absent"
+    - item.state is defined and item.state == "absent"
   ansible.builtin.file:
     path: "{{ item.path | default('/usr/bin') }}/{{ item.name }}"
     state: absent
