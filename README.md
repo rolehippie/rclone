@@ -43,8 +43,7 @@ Architecture of the package to install
 #### Default value
 
 ```YAML
-rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' or ansible_architecture
-  == 'arm64' else 'amd64' }}"
+rclone_arch: "{{ 'arm64' if ansible_architecture == 'aarch64' or ansible_architecture == 'arm64' else 'amd64' }}"
 ```
 
 ### rclone_backups_extra
@@ -159,8 +158,7 @@ Download URL for the package to install
 #### Default value
 
 ```YAML
-rclone_package: https://github.com/rclone/rclone/releases/download/v{{ 
-  rclone_version }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb
+rclone_package: https://github.com/rclone/rclone/releases/download/v{{ rclone_version }}/rclone-v{{ rclone_version }}-linux-{{ rclone_arch }}.deb
 ```
 
 ### rclone_version
