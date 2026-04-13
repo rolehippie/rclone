@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.10.3](https://github.com/rolehippie/rclone/compare/v2.10.2...v2.10.3) (2026-04-13)
+
+### Dependencies
+
+* **patch:** update dependency rclone/rclone to v1.73.4 ([#100](https://github.com/rolehippie/rclone/issues/100)) ([d9d8334](https://github.com/rolehippie/rclone/commit/d9d833440ae03e8001c1a338c50da0cb0bf0ddf5))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([a155dc5](https://github.com/rolehippie/rclone/commit/a155dc57a0924fd6b2a0eb421d4a191e9aa53fa1))
+
 ## [2.10.2](https://github.com/rolehippie/rclone/compare/v2.10.1...v2.10.2) (2026-04-06)
 
 ### Dependencies
