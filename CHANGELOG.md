@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.12.0](https://github.com/rolehippie/rclone/compare/v2.11.2...v2.12.0) (2026-07-27)
+
 ## [2.11.2](https://github.com/rolehippie/rclone/compare/v2.11.1...v2.11.2) (2026-05-25)
 
 ### Dependencies
