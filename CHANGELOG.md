@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.0](https://github.com/rolehippie/rclone/compare/v2.13.0...v2.14.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#111](https://github.com/rolehippie/rclone/issues/111)) ([b9deddf](https://github.com/rolehippie/rclone/commit/b9deddfc0e344345b80c60cf97b97e77cd659f41))
+* **patch:** update dependency python to v3.14.7 ([#109](https://github.com/rolehippie/rclone/issues/109)) ([01f2315](https://github.com/rolehippie/rclone/commit/01f2315b005bc6d0c926e20eaf65608b4682a7dd))
+
 ## [2.13.0](https://github.com/rolehippie/rclone/compare/v2.12.0...v2.13.0) (2026-08-03)
 
 ### Dependencies
