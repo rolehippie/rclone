@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.15.0](https://github.com/rolehippie/rclone/compare/v2.14.0...v2.15.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#115](https://github.com/rolehippie/rclone/issues/115)) ([7c778b5](https://github.com/rolehippie/rclone/commit/7c778b5c7954493ab22f3fd40166022ab2d1841b))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#112](https://github.com/rolehippie/rclone/issues/112)) ([ab30bc6](https://github.com/rolehippie/rclone/commit/ab30bc61b31e5765b63fcec6d0d9eb1bd97e7c40))
+* **patch:** update dependency pre-commit to v4.6.2 ([#113](https://github.com/rolehippie/rclone/issues/113)) ([764b385](https://github.com/rolehippie/rclone/commit/764b3859ec142bbf512fd80dbef11261265ddebe))
+
 ## [2.14.0](https://github.com/rolehippie/rclone/compare/v2.13.0...v2.14.0) (2026-08-10)
 
 ### Dependencies
