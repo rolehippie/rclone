@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.16.0](https://github.com/rolehippie/rclone/compare/v2.15.0...v2.16.0) (2026-08-24)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#114](https://github.com/rolehippie/rclone/issues/114)) ([6c400e5](https://github.com/rolehippie/rclone/commit/6c400e5f0b62a5fe12ee65a3ba34aae6726b9a6a))
+
 ## [2.15.0](https://github.com/rolehippie/rclone/compare/v2.14.0...v2.15.0) (2026-08-17)
 
 ### Dependencies
